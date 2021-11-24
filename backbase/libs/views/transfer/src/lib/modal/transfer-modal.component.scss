@@ -1,0 +1,18 @@
+p {
+  font-size: 14px;
+
+  &.question {
+    margin: 20px 0;
+    font-style: italic;
+  }
+
+  &.to-account-description,
+  &.amount-description {
+    font-weight: 800;
+  }
+
+  &.to-account,
+  &.amount {
+    margin-bottom: 30px;
+  }
+}

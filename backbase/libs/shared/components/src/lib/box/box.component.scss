@@ -1,0 +1,40 @@
+@import 'variables';
+
+.header {
+  width: 100%;
+  background-color: $primary-blue;
+  color: $white;
+  border-radius: 15px 15px 0 0;
+  font-size: 16px;
+  display: flex;
+  height: 60px;
+  align-items: center;
+
+  i {
+    margin-left: 15px;
+    font-size: 26px;
+    font-weight: normal;
+  }
+
+  p {
+    margin-top: 14px;
+    margin-left: 10px;
+    font-weight: 300;
+
+    ::ng-deep {
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.content {
+  width: calc(100% - 40px);
+  background-color: $white;
+  padding: 20px;
+
+  &.radius-bottom {
+    border-radius: 0 0 15px 15px;
+  }
+}

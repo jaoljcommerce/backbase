@@ -1,0 +1,9 @@
+<backbase-shared-modal [title]="'transfer.modal.title' | transloco">
+  <p class="question">{{ 'transfer.modal.question' | transloco }}</p>
+  <p class="to-account-description">
+    {{ 'transfer.modal.to_account' | transloco }}
+  </p>
+  <p class="to-account">{{ toAccount$ | async }}</p>
+  <p class="amount-description">{{ 'transfer.modal.amount' | transloco }}</p>
+  <p class="amount">€ {{ amount$ | async }}</p>
+</backbase-shared-modal>

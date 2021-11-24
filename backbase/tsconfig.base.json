@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@backbase/core/api": ["libs/core/api/src/index.ts"],
+      "@backbase/core/model": ["libs/core/model/src/index.ts"],
+      "@backbase/features/dashboard": ["libs/features/dashboard/src/index.ts"],
+      "@backbase/shared/components": ["libs/shared/components/src/index.ts"],
+      "@backbase/shared/form": ["libs/shared/form/src/index.ts"],
+      "@backbase/views/transactions": ["libs/views/transactions/src/index.ts"],
+      "@backbase/views/transfer": ["libs/views/transfer/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

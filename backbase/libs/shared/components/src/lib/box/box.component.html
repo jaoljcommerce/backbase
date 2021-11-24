@@ -1,0 +1,7 @@
+<div class="header">
+  <i [ngClass]="icon"></i>
+  <p [innerHTML]="title"></p>
+</div>
+<div class="content" [ngClass]="{ 'radius-bottom': contentRadius }">
+  <ng-content></ng-content>
+</div>

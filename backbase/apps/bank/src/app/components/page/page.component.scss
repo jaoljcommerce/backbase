@@ -1,0 +1,24 @@
+@import 'variables';
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 95px);
+
+  .background {
+    height: 100%;
+    width: 100%;
+    background-image: url('/assets/images/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    position: relative;
+  }
+
+  .content {
+    position: absolute;
+  }
+}

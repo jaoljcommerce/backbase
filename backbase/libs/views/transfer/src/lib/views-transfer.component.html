@@ -1,0 +1,64 @@
+<div class="transfer">
+  <backbase-shared-box
+    [title]="'transfer.title' | transloco"
+    icon="lni lni-credit-cards"
+    [contentRadius]="true"
+  >
+    <form
+      [formGroup]="transferForm"
+      ngxsForm="transfer"
+      novalidate
+      (ngSubmit)="onSubmit()"
+    >
+      <backbase-form-input
+        [label]="'form.from_account.label' | transloco"
+        type="text"
+        name="fromAccount"
+        [form]="transferForm"
+      ></backbase-form-input>
+      <backbase-form-input
+        [label]="'form.to_account.label' | transloco"
+        type="text"
+        name="toAccount"
+        [placeholder]="'form.to_account.placeholder' | transloco"
+        [form]="transferForm"
+        [errors]="
+          getInputErrors('toAccount', [
+            {
+              key: 'required',
+              message:
+                'validator.required'
+                | transloco: { name: 'form.to_account.label' | transloco }
+            }
+          ])
+        "
+      ></backbase-form-input>
+      <backbase-form-input
+        [label]="'form.amount.label' | transloco"
+        type="number"
+        name="amount"
+        [placeholder]="'form.amount.placeholder' | transloco"
+        [form]="transferForm"
+        [errors]="
+          getInputErrors('amount', [
+            {
+              key: 'min',
+              message:
+                'validator.min' | transloco: { value: balanceValue - 500 }
+            },
+            { key: 'max', message: 'validator.max' | transloco },
+            {
+              key: 'required',
+              message:
+                'validator.required'
+                | transloco: { name: 'form.amount.label' | transloco }
+            }
+          ])
+        "
+      ></backbase-form-input>
+      <div class="button-wrapper">
+        <backbase-form-submit-button (submitForm)="submitForm()"></backbase-form-submit-button>
+      </div>
+    </form>
+  </backbase-shared-box>
+</div>

@@ -1,0 +1,18 @@
+.transfer {
+  width: 350px;
+  margin-right: 30px;
+
+  ::ng-deep {
+    input {
+      &.fromAccount {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .button-wrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

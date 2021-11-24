@@ -1,0 +1,15 @@
+<mat-label>{{ label }}</mat-label>
+<mat-form-field class="mat-form" appearance="outline" [formGroup]="form">
+  <input
+    [type]="type"
+    matInput
+    [formControlName]="name"
+    [placeholder]="placeholder"
+    autocomplete="off"
+    class="mat-input"
+    [ngClass]="name"
+  />
+</mat-form-field>
+<ng-container *ngFor="let error of errors">
+  <mat-error *ngIf="error.condition" [innerHtml]="error.message"></mat-error>
+</ng-container>

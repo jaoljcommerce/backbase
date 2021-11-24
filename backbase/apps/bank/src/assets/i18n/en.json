@@ -1,0 +1,47 @@
+{
+  "header": {
+    "title": "Frontend <span>Technical Assignment</span>"
+  },
+  "transfer": {
+    "title": "<span>Make</span> Transfer",
+    "modal": {
+      "title": "<span>Review</span> Transfer",
+      "question": "Are you ready to send out this transfer?",
+      "to_account": "It will be send to account:",
+      "amount": "With the amount of:"
+    }
+  },
+  "transactions": {
+    "title": "Transactions <span>List</span>"
+  },
+  "footer": {
+    "bank_name": "Peachtree Bank"
+  },
+  "form": {
+    "from_account": {
+      "label": "From Account",
+      "placeholder": "My Personal Account: € "
+    },
+    "to_account": {
+      "label": "To Account",
+      "placeholder": "type an account name"
+    },
+    "amount": {
+      "label": "Amount",
+      "placeholder": "specify the amount"
+    },
+    "filter": {
+      "placeholder": "filter transactions"
+    }
+  },
+  "validator": {
+    "required": "{{name}} is <strong>required</strong>",
+    "min": "Amount must be <strong>greater than</strong> {{value}}",
+    "max": "There is <strong>not enough</strong> balance"
+  },
+  "button": {
+    "submit": "Submit",
+    "close": "Close",
+    "send_transfer": "Send Transfer"
+  }
+}

@@ -1,0 +1,17 @@
+@import 'variables';
+
+footer {
+  height: 35px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  color: $primary-blue;
+  position: relative;
+  background-color: $white;
+
+  p {
+    margin: 0;
+  }
+}

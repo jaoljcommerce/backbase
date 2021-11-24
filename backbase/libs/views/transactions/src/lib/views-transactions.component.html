@@ -1,0 +1,36 @@
+<div class="transactions">
+  <backbase-shared-box [title]="'transactions.title' | transloco" icon="lni lni-list">
+    <backbase-shared-filter (inputChange)="filterTransactions($event)"></backbase-shared-filter>
+    <div class="list">
+      <ng-container *ngFor="let transaction of getTransactions() | async">
+        <backbase-shared-transaction-item>
+          <div
+            data-test-hook="transactionColour"
+            class="colour"
+            [ngStyle]="{ background: transaction.categoryCode }"
+          ></div>
+          <p data-test-hook="transactionDate" class="date">
+            {{ transaction.dates.valueDate | date: 'LLL. dd' }}
+          </p>
+          <p data-test-hook="transactionMerchantName" class="merchant-name">
+            {{ transaction.merchant.name }}
+          </p>
+          <p data-test-hook="transactionType" class="type">
+            {{ transaction.transaction.type }}
+          </p>
+          <p
+            data-test-hook="transactionAmount"
+            class="amount"
+            [innerHtml]="
+              transaction.transaction.amountCurrency.amount
+                | currency
+                  : transaction.transaction.amountCurrency.currencyCode
+                  : 'symbol'
+                | formatAmount: transaction.transaction.creditDebitIndicator
+            "
+          ></p>
+        </backbase-shared-transaction-item>
+      </ng-container>
+    </div>
+  </backbase-shared-box>
+</div>

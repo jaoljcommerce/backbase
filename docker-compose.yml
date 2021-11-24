@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  node:
+    container_name: 'node'
+    build:
+      context: './docker/node'
+    image: node_16_cli
+    volumes:
+      - ./backbase:/usr/src/app
+    ports:
+      - '3000:3000'
+      - '4200:4200'
+      - '4211:4211'
+    stdin_open: true
+    tty: true
